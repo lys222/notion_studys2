@@ -22,7 +22,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
-
+      - name: Create .env file
+        run: |
+          echo "NOTION_PAGE_ID=${{ secrets.NOTION_PAGE_ID }}" >> .env
       - name: npm install, build, and test
         run: |
           yarn install
