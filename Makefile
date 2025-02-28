@@ -10,5 +10,5 @@ dev:
 	docker run -it --rm -v $(PWD):/app -p 8001:3000 morethan-log /bin/bash -c "yarn run dev"
 
 run:
-	docker run -it --rm -v $(PWD):/app morethan-log /bin/bash
+	docker run -it --rm -v $(PWD):/app -p 8080:$PORT morethan-log /bin/bash
 
